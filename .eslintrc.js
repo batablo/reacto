@@ -34,6 +34,7 @@ module.exports = {
     '@typescript-eslint',
     'import',
     'jsx-a11y',
+    'prefer-arrow',
     'prettier',
     'react',
     'react-hooks',
@@ -93,6 +94,14 @@ module.exports = {
     // 'import React'する時にでたエラーをしゃあなしで回避。
     'no-use-before-define': 'off',
     '@typescript-eslint/no-use-before-define': ['error'],
+    'prefer-arrow/prefer-arrow-functions': [
+      'error',
+      {
+        disallowPrototype: true,
+        singleReturnOnly: false,
+        classPropertiesAllowed: false,
+      },
+    ],
   },
   overrides: [
     {
